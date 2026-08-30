@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Buchungssystem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🚀 BusinessName</div>
+        <ul class="nav-links">
+            <li><a href="#" id="nav-home">Startseite</a></li>
+            <li><a href="#" id="nav-maps">📍 Standort</a></li>
+            <li id="nav-login"><a href="#" id="nav-auth">Login / Registrieren</a></li>
+            <li id="nav-dashboard" class="hidden"><a href="#" id="nav-dash-link">Mein Bereich</a></li>
+            <li id="nav-logout" class="hidden"><a href="#" id="nav-logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="active view-section">
+            <div class="hero">
+                <h1 id="hero-title">Willkommen</h1>
+                <p>Dein Spezialist für Premium-Dienstleistungen.</p>
+                <button class="btn-primary" id="hero-book-btn">Jetzt Termin buchen</button>
+            </div>
+        </section>
+
+        <section id="auth" class="hidden view-section">
+            <div class="container">
+                <h2>Account Anmelden / Erstellen</h2>
+                <div class="auth-tabs">
+                    <button id="tab-customer" class="tab-btn active">Kunde</button>
+                    <button id="tab-employee" class="tab-btn">Mitarbeiter</button>
+                </div>
+                
+                <form id="authForm">
+                    <input type="email" id="authEmail" placeholder="E-Mail-Adresse" required>
+                    <input type="password" id="authPassword" placeholder="Passwort (mind. 6 Zeichen)" required>
+                    
+                    <button type="submit" id="btn-login" class="btn-primary">Einloggen</button>
+                    <button type="button" id="btn-register" class="btn-secondary" style="width:100%; margin-top:5px;">Neuen Account registrieren</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="customer-dashboard" class="hidden view-section">
+            <div class="container">
+                <h2>Hallo, <span id="cust-email-display"></span>!</h2>
+                
+                <div class="booking-panel">
+                    <h3>Neuen Termin buchen</h3>
+                    <form id="bookingForm">
+                        <label>Leistung wählen:</label>
+                        <select id="serviceSelect" required></select>
+
+                        <label>Mitarbeiter wählen:</label>
+                        <select id="employeeSelect" required>
+                            <option value="any">Egal (Nächster Freier)</option>
+                            <option value="emp1">Alex</option>
+                            <option value="emp2">Sam</option>
+                        </select>
+
+                        <label>Datum:</label>
+                        <input type="date" id="bookDate" required>
+
+                        <button type="button" id="btn-check-slots" class="btn-secondary">Freie Zeiten suchen</button>
+                        
+                        <div id="timeSlots" class="time-slots hidden"></div>
+                    </form>
+                </div>
+
+                <div class="appointments-panel" style="margin-top:2rem;">
+                    <h3>Deine gebuchten Termine (Echtzeit)</h3>
+                    <div id="customer-appointments">Wird geladen...</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="employee-dashboard" class="hidden view-section">
+            <div class="container">
+                <h2>Mitarbeiter-Zentrale (<span id="emp-email-display"></span>)</h2>
+                <p>Alle eingehenden Kundenbuchungen in Live-Übertragung:</p>
+                <div id="employee-appointments" style="margin-top:1.5rem;">Wird geladen...</div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
