@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Buchungssystem</title>
+    <title>Hair & Style Lounge</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <div class="logo">🚀 BusinessName</div>
+        <div class="logo">🚀 Hair & Style Lounge</div>
         <ul class="nav-links">
             <li><a href="#" id="nav-home">Startseite</a></li>
             <li><a href="#" id="nav-maps">📍 Standort</a></li>
@@ -19,15 +19,15 @@
     </nav>
 
     <main>
-        <section id="home" class="active view-section">
+        <section id="home" class="view-section active">
             <div class="hero">
-                <h1 id="hero-title">Willkommen</h1>
-                <p>Dein Spezialist für Premium-Dienstleistungen.</p>
+                <h1 id="hero-title">Willkommen bei Hair & Style Lounge</h1>
+                <p>Dein Spezialist für Premium-Styling und Friseur-Dienstleistungen.</p>
                 <button class="btn-primary" id="hero-book-btn">Jetzt Termin buchen</button>
             </div>
         </section>
 
-        <section id="auth" class="hidden view-section">
+        <section id="auth" class="view-section hidden">
             <div class="container">
                 <h2>Account Anmelden / Erstellen</h2>
                 <div class="auth-tabs">
@@ -40,12 +40,12 @@
                     <input type="password" id="authPassword" placeholder="Passwort (mind. 6 Zeichen)" required>
                     
                     <button type="submit" id="btn-login" class="btn-primary">Einloggen</button>
-                    <button type="button" id="btn-register" class="btn-secondary" style="width:100%; margin-top:5px;">Neuen Account registrieren</button>
+                    <button type="button" id="btn-register" class="btn-secondary" style="width:100%; margin-top:8px;">Neuen Account registrieren</button>
                 </form>
             </div>
         </section>
 
-        <section id="customer-dashboard" class="hidden view-section">
+        <section id="customer-dashboard" class="view-section hidden">
             <div class="container">
                 <h2>Hallo, <span id="cust-email-display"></span>!</h2>
                 
@@ -65,7 +65,7 @@
                         <label>Datum:</label>
                         <input type="date" id="bookDate" required>
 
-                        <button type="button" id="btn-check-slots" class="btn-secondary">Freie Zeiten suchen</button>
+                        <button type="button" id="btn-check-slots" class="btn-secondary" style="width:100%; margin-top:10px;">Freie Zeiten suchen</button>
                         
                         <div id="timeSlots" class="time-slots hidden"></div>
                     </form>
@@ -78,7 +78,7 @@
             </div>
         </section>
 
-        <section id="employee-dashboard" class="hidden view-section">
+        <section id="employee-dashboard" class="view-section hidden">
             <div class="container">
                 <h2>Mitarbeiter-Zentrale (<span id="emp-email-display"></span>)</h2>
                 <p>Alle eingehenden Kundenbuchungen in Live-Übertragung:</p>
